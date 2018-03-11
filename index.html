@@ -1,0 +1,114 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Circuit Symbols</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./images/flaticon.css"> 
+        <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+        <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+        <link rel="stylesheet" href="./css/index.css">
+    </head>
+
+    <body>
+        <div class="container">
+
+            <header>
+                <h1>Circuit Symbols </h1>
+            </header>
+
+            <p class="intro"> How well do you know your circuit symbols? Play the game and find out. Click on the squares to match the labels with the right symbols</p>
+
+            <section class="score-panel">
+            	<ul class="stars">
+            		<li><i class="fa fa-star"></i></li>
+            		<li><i class="fa fa-star"></i></li>
+            		<li><i class="fa fa-star"></i></li>
+            	</ul>
+            	<span class="moves">0</span> Move(s)
+                <div class="timer"></div>
+                <div class="restart" onclick=startGame()>
+            		<i class="fa fa-repeat"></i>
+            	</div>
+            </section>
+
+            <ul class="deck" id="card-deck">
+                <li class="card" type="switch2">
+                    <i class="fi flaticon-switch-2"></i>
+                </li>
+                <li class="card" type="ground">
+                    <i class="fi flaticon-ground"></i>
+                </li>
+                <li class="card" type="resistor">
+                    <span>Resistor</span>
+                </li>
+                <li class="card" type="diode">
+                    <span>Diode</span>
+                </li>
+                <li class="card" type="powersupply">
+                    <span>Power Supply</span>
+                </li>
+                <li class="card" type="resistor">
+                    <i class="fi flaticon-resistor"></i>
+                </li>
+                <li class="card" type="cell">
+                    <span>Cell</span>
+                </li>
+                <li class="card" type="diode">
+                    <i class="fi flaticon-diode"></i>
+                </li>
+                <li class="card" type="powersupply">
+                    <i class="fi flaticon-supply"></i>
+                </li>
+                <li class="card" type="switch2">
+                    <span>Closed Switch</span>
+                </li>
+                <li class="card" type="resistor1">
+                    <i class="fi flaticon-resistor-1"></i>
+                </li>
+                <li class="card" type="battery">
+                    <i class="fi flaticon-battery"></i>
+                </li>
+                <li class="card" type="ground">
+                    <span>Ground</span>
+                </li>
+                <li class="card" type="resistor1">
+                    <span>Variable Resistor</span>
+                </li>
+                <li class="card" type="battery">
+                    <span>Battery</span>
+                </li>
+                <li class="card" type="cell">
+                    <i class="fi flaticon-cell"></i>
+                </li>
+            </ul>
+
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Congratulations 🎉</h2>
+                    <a class="close" href=# >×</a>
+                    <div class="content-1">
+                        Congratulations you're a winner 🎉🎉
+                    </div>
+                    <div class="content-2">
+                        <p>You made <span id=finalMove> </span> moves </p>
+                        <p>in <span id=totalTime> </span> </p>
+                        <p>Rating:  <span id=starRating></span></p>
+                    </div>
+                    <button id="play-again"onclick="playAgain()">
+                        Play again 😄</a>
+                    </button>
+                </div>
+            </div>
+
+            <footer>
+                <span> A YZL APP</span>
+            </footer>
+
+        </div>
+        <script src="./js/jquery.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+
+</html>
